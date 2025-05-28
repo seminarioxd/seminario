@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Asistencia con QR</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <link rel="stylesheet" href="css/scaner.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Registro de Asistencia</h1>
+        
+        <div class="controls">
+            <button id="startButton">Iniciar Escáner</button>
+            <button id="stopButton" disabled>Detener Escáner</button>
+        </div>
+        
+        <div class="scanner-container">
+            <video id="scanner" playsinline></video>
+            <div class="scan-region"></div>
+        </div>
+        
+        <div id="result">
+            <p>Escanea el código QR de un estudiante para registrar su asistencia.</p>
+        </div>
+    </div>
+    
+    <footer>
+        Sistema de Asistencia - Universidad UCC
+    </footer>
+    <script src="js/scaner.js"></script>
+</body>
+</html>
